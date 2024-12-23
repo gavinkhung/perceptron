@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    container_name: perceptron
+    command: start.sh jupyter lab --NotebookApp.token=''
+    ports:
+      - 8888:8888
+    volumes:
+      - .:/home/jovyan/work
